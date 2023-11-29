@@ -1,6 +1,6 @@
 variable "imageid" {
   type = string
-  default = "ami-0fc5d935ebf8bc3bc"
+  default = "ami-0230bd60aa48260c6"
 }
 variable "instantancetype" {
     type = string 
