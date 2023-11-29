@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = ["${aws_security_group.allow_tls.id}"]
   connection {
     type     = "ssh"
-    user     = "ubuntu"
+    user     = "ec2-user"
     private_key = file("terraform.pem")
     host     = aws_instance.web.public_dns
   }
