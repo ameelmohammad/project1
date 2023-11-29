@@ -14,13 +14,11 @@ resource "aws_instance" "web" {
   }
   provisioner "remote-exec" {
     inline = [
-      "sudo apt-get update",
-      "sudo apt-get install nginx -y",
-      "sudo apt-get install zip -y",
-      "sudo apt-get install unzip -y",
+      "sudo yum update",
+      "sudo yum install httpd -y",
       "wget https://www.free-css.com/assets/files/free-css-templates/download/page296/mediplus-lite.zip",
       "sudo unzip mediplus-lite.zip",
-      "sudo mv mediplus-lite /var/www/html/"
+      "sudo mv -f mediplus-lite /var/www/html/"
     ]
   }
   
